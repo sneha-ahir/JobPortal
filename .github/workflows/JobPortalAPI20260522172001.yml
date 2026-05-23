@@ -2,7 +2,7 @@ name: Build and deploy .NET Core application to Web App JobPortalAPI202605221720
 on:
   push:
     branches:
-    - master
+    - backend
 permissions:
   id-token: write
   contents: read
