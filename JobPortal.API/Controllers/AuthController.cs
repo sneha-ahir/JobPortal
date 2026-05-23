@@ -2,6 +2,7 @@
 using JobPortal.API.DTOs;
 using JobPortal.API.Helpers;
 using JobPortal.API.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -60,6 +61,8 @@ namespace JobPortal.API.Controllers
 
         // POST api/auth/login
         [HttpPost("login")]
+        [AllowAnonymous]
+        
         public async Task<IActionResult> Login(LoginDTO dto)
         {
             // Find user by email

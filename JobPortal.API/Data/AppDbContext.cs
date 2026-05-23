@@ -15,6 +15,13 @@ namespace JobPortal.API.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Job>()
+        .Property(j => j.SalaryMin)
+        .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<Job>()
+                .Property(j => j.SalaryMax)
+                .HasColumnType("decimal(18,2)");
             // Prevent cascade delete conflicts
             modelBuilder.Entity<Application>()
                 .HasOne(a => a.Resume)

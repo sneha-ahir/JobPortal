@@ -14,7 +14,7 @@ namespace JobPortal.API.Controllers
     {
         private readonly AppDbContext _context;
 
-        public CompanyController(AppDbContext context)
+        public CompanyController(AppDbContext context) 
         {
             _context = context;
         }
