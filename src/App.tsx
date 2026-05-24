@@ -71,8 +71,6 @@ function AppRoutes() {
                             </ProtectedRoute>
                         } 
                     />
-
-                    {/* Job Seeker Protected Routes */}
                     <Route 
                         path="/dashboard" 
                         element={

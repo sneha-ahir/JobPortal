@@ -28,7 +28,7 @@ const EmployerDashboard = () => {
                 });
                 
                 // Set recent jobs (last 3)
-                setRecentJobs(myJobs.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)).slice(0, 3));
+                setRecentJobs(myJobs.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()).slice(0, 3));
             } catch (err) {
                 console.error('Error fetching dashboard data:', err);
                 // Fallback to mock data if API fails
