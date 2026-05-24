@@ -94,7 +94,8 @@ builder.Services.AddCors(options =>
                 "http://localhost:3000",
                 "http://localhost:3001",
                 "http://192.168.0.102:3001",
-                "http://192.168.0.102:3000"
+                "http://192.168.0.102:3000",
+                "https://job-portal-kappa-woad.vercel.app/"
               )
               .AllowAnyHeader()
               .AllowAnyMethod()
