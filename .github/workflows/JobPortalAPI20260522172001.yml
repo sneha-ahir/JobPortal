@@ -25,7 +25,7 @@ jobs:
         run: dotnet build ./JobPortal.API/JobPortal.API.csproj --configuration Release --no-restore
 
       - name: Publish (self-contained)
-        run: dotnet publish ./JobPortal.API/JobPortal.API.csproj --configuration Release --runtime win-x64 --self-contained true --output ./publish
+        run: dotnet publish ./JobPortal.API/JobPortal.API.csproj --configuration Release --runtime win-x86 --self-contained true --output ./publish
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
